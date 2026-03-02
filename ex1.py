@@ -81,6 +81,6 @@ def algRuim(troco):
     notasCinco = trocoAt // 5
     trocoAt = trocoAt - (5*notasCinco)
     notasUm = trocoAt
-    print(f"EM\nR$ 100,00       {notasCem} cedulas\nR$ 50,00       {notasCinquenta} cedulas\nR$ 20,00       {notasVinte} cedulas\nR$ 10,00       {notasDez} cedulas\nR$ 5,00       {notasCinco} cedulas\nR$ 1,00       {notasUm} cedulas")
+    print(f"troco EM\nR$ 100,00       {notasCem} cedulas\nR$ 50,00       {notasCinquenta} cedulas\nR$ 20,00       {notasVinte} cedulas\nR$ 10,00       {notasDez} cedulas\nR$ 5,00       {notasCinco} cedulas\nR$ 1,00       {notasUm} cedulas")
     
 algRuim(troco)
