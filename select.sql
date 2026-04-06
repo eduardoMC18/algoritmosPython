@@ -102,4 +102,19 @@ SELECT * FROM produtos ORDER BY preco DESC;
 SELECT * FROM clientes ORDER BY idade DESC;
 
 -- 19) Conte quantos clientes existem por cidade
-SELECT *, COUNT(*) AS total_por_cidade FROM clientes GROUP BY cidade;
+SELECT cidade, COUNT(*) AS total FROM clientes GROUP BY cidade;
+
+-- 20) Conte quantos produtos existem por categoria
+SELECT categoria, COUNT(*) AS total FROM produtos GROUP BY categoria;
+
+-- 21) Some o valor total dos produtos por categoria
+SELECT categoria, SUM(preco) AS total FROM produtos GROUP BY categoria;
+
+-- 22) Calcule a média de preço por categoria
+SELECT categoria, AVG(preco) AS media FROM produtos GROUP BY categoria;
+
+-- 23) Mostre cidades com mais de 3 clientes
+SELECT cidade, COUNT(*) AS total FROM clientes GROUP BY cidade HAVING COUNT(*) > 3;
+
+-- 24) Mostre categorias com soma de preços maior que 3000
+SELECT categoria, SUM(preco) AS total FROM produtos GROUP BY categoria HAVING SUM(preco) > 3000.00;
